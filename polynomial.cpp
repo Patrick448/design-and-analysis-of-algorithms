@@ -6,6 +6,9 @@ using namespace std::chrono;
 
 // Original iterative polynomial evaluation
 long int polynomial_iter(const int n, const int x, const int* vec) {
+    //2n
+    //O(n)
+
     int p = vec[n];
 
     for(int i = n - 1; i >= 0; i--){
@@ -17,6 +20,9 @@ long int polynomial_iter(const int n, const int x, const int* vec) {
 
 // Original recursive polynomial evaluation
 long int polynomial_rec(const int n, const int x, const int* vec){
+   //T(0) = 1
+    //T(n) = T(n-1) + 1
+    // O(2^n)
 
     if(n == 0) {
         return vec[0];
@@ -28,6 +34,8 @@ long int polynomial_rec(const int n, const int x, const int* vec){
 
 // AI iterative polynomial evaluation
 long int ai_polynomial_iterative(const int n, const int x, const int* vec) {
+    //2n
+    //O(n)
     long int result = vec[0];
     for (int i = 1; i <= n; ++i) {
         result = result * x + vec[i];
@@ -37,6 +45,10 @@ long int ai_polynomial_iterative(const int n, const int x, const int* vec) {
 
 // AI recursive polynomial evaluation
 long int ai_polynomial_recursive(const int n, const int x, const int* vec) {
+      //T(0) = 1
+    //T(n) = T(n-1) + 1
+    // O(2^n)
+
     if (n == 0)
         return vec[0];
     return x * ai_polynomial_recursive(n - 1, x, vec) + vec[n];

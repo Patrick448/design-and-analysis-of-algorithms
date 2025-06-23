@@ -6,6 +6,8 @@ using namespace std::chrono;
 
 // Original iterative Fibonacci
 long int fibonacci_iter(int n) {
+    //T(n) = 4n + 5
+    //O(n)
     if (n == 1) {
         return 1;
     } else if (n == 2) {
@@ -23,6 +25,11 @@ long int fibonacci_iter(int n) {
 
 // Original recursive Fibonacci
 long int fibonacci_rec(int n) {
+    //T(0) = 1
+    //T(2) = 1
+    //T(n) = T(n-1) + T(n-2)
+    // O(2^n)
+
     if (n == 1) {
         return 1;
     } else if (n == 2) {
@@ -34,6 +41,8 @@ long int fibonacci_rec(int n) {
 
 // AI iterative Fibonacci
 long int ai_fibonacci_iterative(int n) {
+    //T(n) = 4n + 4
+    //O(n)
     if (n <= 0) {
         return 0;
     } else if (n == 1) {
@@ -50,6 +59,11 @@ long int ai_fibonacci_iterative(int n) {
 
 // AI recursive Fibonacci
 long int ai_fibonacci_recursive(int n) {
+    //T(0) = 1
+    //T(2) = 1
+    //T(n) = T(n-1) + T(n-2)
+    //O(2^n)
+
     if (n <= 0) {
         return 0;
     } else if (n == 1) {
