@@ -1,0 +1,33 @@
+Create an algorithm that verifies if a graph is connected or not.
+It has to work both for graphs and digraphs.
+
+The input representation is given in a txt file, following the examples.
+The symbol # is used to separate the parts of the definition of the graph.
+
+Example 1:
+
+graph
+#
+['x1','x2','x3','x4','x5','x6']
+#
+[['x1','x2'],['x2','x3'],['x3','x1'],['x4','x5'],['x5','x6'],['x6','x4']]
+
+Example 2:
+
+digraph
+#
+['x1','x2','x3','x4','x5','x6']
+#
+[['x1', 'x2'], ['x2', 'x3'], ['x3', 'x1'], ['x4', 'x5'], ['x5', 'x6'], ['x2', 'x4']]
+
+The algorithm should use a class Graph following the signature:
+
+class Graph:
+    edges = []
+    nodes = []
+
+    def __init__(self, nodes=None, edges=None, file_path=None, directed=False):
+        #implementation
+
+    def check_connected(self) -> boolean:
+       #implementation
